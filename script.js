@@ -28,12 +28,12 @@ gsap.from(".data",{
     opacity:0,
 })
 
-gsap.from("#nav-bar, .second-hider",{
+gsap.from("#nav-bar",{
     x:140,
     duration:0.6,
     
 })
-gsap.from(".floting-section", {
+gsap.from(".menu", {
       opacity:0,
       top:60,
       delay:1  
@@ -44,11 +44,35 @@ gsap.to("#nav-bar", {
    scrollTrigger:{
        trigger:"#page2",
        scroller:"body",
-       markers:true,
-       start:"top 60%",
+    //    markers:true,
+       start:"top 50%",
        end:"top 30%",
        scrub:2
    }
+})
+gsap.to(".menu", {
+    height:50,
+    duration:0.6,
+    scrollTrigger:{
+        trigger:"#page2",
+        scroller:"body",
+        // markers:true,
+        start:"top 90%",
+        end:"top 30%",
+        scrub:2
+    }
+})
+gsap.to(".navigation", {
+    // x:-50,
+    opacity:0,
+    scrollTrigger:{
+        trigger:"#page2",
+        scroller:"body",
+        // markers:true,
+        start:"top 90%",
+        end:"top 30%",
+        scrub:2
+    }
 })
 
 gsap.to(".menu",{
@@ -56,50 +80,72 @@ gsap.to(".menu",{
     scrollTrigger:{
         trigger:"#page2",
         scroller:"body",
-        markers:true,
-        start:"top 60%",
+        // markers:true,
+        start:"top 50%",
         end:"top 30%",
         scrub:2
     }
 })
-gsap.to(".floting-section" ,{
-    backgroundColor:"transparent",
-    duration:0.77,
-    delay:0.1,
-       scrollTrigger:{
-        trigger:"#page2",
-        scroller:"body",
-        markers:true,
-        start:"top 96%",
-        end:"top 90%",
-        scrub:true
-    }
-})
 
 // lets start the js
-let homeLinks = document.querySelector(".navigation")
-let linkHider = document.querySelector(".menu")
-// event listner
-linkHider.addEventListener("click",() => {
-    homeLinks.classList.toggle("hidden")
-    if (homeLinks.classList.contains("hidden")) {
+let homeLinks = document.querySelector(".navigation");
+let linkHider = document.querySelector(".menu");
+let leftCont = document.querySelector("#nav-bar");
+let menuIcon = document.querySelector("#menuIcon");
+
+// Initial state
+let isMenuOpen = false;
+
+menuIcon.addEventListener("click", () => {
+    if (!isMenuOpen) {
+        // Show the menu
+        homeLinks.classList.remove("hidden");
+        homeLinks.classList.add("show");
+
+        // Animate the menu links
         gsap.from(".navigation", {
-            opacity:1,
-            delay:0.3,
-            duration:0.5,
-            x:0
-          
-        })
-       
+            opacity: 0,
+            delay: 0.3,
+            duration: 0.5,
+            x: -70
+        });
+
+        // Animate the left container width
+        gsap.to(leftCont, {
+            width: "10rem", // Change to the width when the menu is open
+            duration: 0.5,
+            ease: "power2.inOut"
+        });
+
+         // Animate the menu icon moving back to the original position and fading in
+        gsap.to(linkHider, {
+            x: 0,  // Move back to the original position
+            opacity: 1, // Fade in
+            duration: 0.5,
+            ease: "power2.inOut"
+        });
     } else {
-        gsap.from(".navigation", {
-            opacity:0,
-            delay:0.3,
-            duration:0.5,
-            x:-110
-        })
+        // Hide the menu
+        homeLinks.classList.remove("show");
+        homeLinks.classList.add("hidden");
+
+        // Animate the left container width
+        gsap.to(leftCont, {
+            width: "60px", // Change to the width when the menu is closed
+            duration: 0.5,
+            ease: "power2.inOut"
+        });
+
+        // Animate the menu icon moving to the left and fading out
+        gsap.to(linkHider, {
+            x: 130,  // Example move to the left 
+            duration: 0.5,
+            ease: "power2.inOut"
+        });
+        
        
     }
 
-    
-})
+    // Toggle the menu state
+    isMenuOpen = !isMenuOpen;
+});

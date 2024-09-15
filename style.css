@@ -18,6 +18,7 @@ html , body{
     height: 100vh;
      width: 10rem;
     background: #2C3E50;
+    
 }
 .links{
     position: absolute;
@@ -36,49 +37,29 @@ html , body{
     font-size: 1rem;
     padding: 6px;
 }
-.floting-section{
-    position: absolute;
-    top: 140px;
-    bottom: 150px;
-    /* border-radius: 10px; */
-    z-index: 1;
-    right: 130px;
-    overflow: hidden;
-    width: 60px;
-    background: #D35400;
-}
+
 .navigation{
-    position: fixed;
-    top: 170px;
+    position: absolute;
+    top: 180px;
+    padding-left: 10px;
+    width: 80%;
     display: flex;
+    color: aliceblue;
+    overflow: hidden;
     flex-direction: column;
     align-items: start;
     gap: 30px;
     justify-content: center;
     right: 10px;
 }
+.navigation h3{
+    font-size: 1rem;
+
+}
 .hidden{
     display: none;
 }
-/* .nav-hider{
-    height: 140px;
-    position: fixed;
-    top: 0;
-    right: 160px;
-    width: 54px;
-    background: #fff;
-    z-index: 21;
-} */
-/* 
-.second-hider{
-    height: 140px;
-    position: fixed;
-    top: 0;
-    right: 130px;
-    width: 30px;
-    background: #2C3E50;
-    z-index: 21;
-} */
+
 .menu{
     position: fixed;
     /* border-radius: 10px; */
@@ -87,9 +68,9 @@ html , body{
     overflow: hidden;
     top: 140px;
     right: 130px;
-    align-content: center;
+    align-content: start;
     color: #fff;
-    height: 60px;
+    height: 320px;
     width: 60px;
     z-index: 99;
     background: #D35400;
@@ -97,6 +78,7 @@ html , body{
 .menu i{
    font-size: 1.3rem;
    padding-bottom: 14px;
+   padding-top: 14px;
    cursor: pointer;
 }
 /* page 1 and all things... */
@@ -167,7 +149,6 @@ html , body{
 .data{
     height: 30vh;
     width: 25vw;
-    /* background: red; */
    display: flex;
    align-items: center;
    justify-content: center;
@@ -204,10 +185,15 @@ html , body{
 /* page2 */
 #page2{
     height: 100%;
-    width: calc(100% - 14rem);
-    /* background: rgb(92, 64, 64); */
+    width:100%;
+    background: rgb(92, 64, 64);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+#Journey{
+    height: 60%;
+    width: 80%;
+    background: red;
+}
