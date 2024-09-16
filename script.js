@@ -86,6 +86,16 @@ gsap.to(".menu",{
         scrub:2
     }
 })
+// cursor
+let cursor = document.querySelector("#cursor");
+let body = document.querySelector("body");
+body.addEventListener("mousemove", (e) => {
+    gsap.to(cursor, {
+        x:e.x,
+        y:e.y,
+        // ease: "power2.inOut"
+    })
+})
 
 // lets start the js
 let homeLinks = document.querySelector(".navigation");
