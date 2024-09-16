@@ -63,7 +63,7 @@ gsap.to(".menu", {
     }
 })
 gsap.to(".navigation", {
-    // x:-50,
+    x:-50,
     opacity:0,
     scrollTrigger:{
         trigger:"#page2",
@@ -113,11 +113,11 @@ menuIcon.addEventListener("click", () => {
         homeLinks.classList.add("show");
 
         // Animate the menu links
-        gsap.from(".navigation", {
-            opacity: 0,
+        gsap.to(".navigation", {
+            opacity: 1,
             delay: 0.3,
             duration: 0.5,
-            x: -70
+            x: 0
         });
 
         // Animate the left container width

@@ -244,3 +244,8 @@ html , body{
 .text p{
    line-height: 25px;
 }
+
+#page3{
+    height: 100vh;
+    width: 100%;
+}
