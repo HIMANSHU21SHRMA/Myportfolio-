@@ -74,7 +74,6 @@ html , body{
 
 .menu{
     position: fixed;
-    /* border-radius: 10px; */
     font-size: 30px;
     text-align: center;
     overflow: hidden;
@@ -97,7 +96,7 @@ html , body{
 #page1{
     height: 100%;
     width: calc(100% - 14rem);
-    /* background: rgb(92, 64, 64); */
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -110,8 +109,7 @@ html , body{
     align-items: center;
     justify-content: center;
     width: 70vw;
-    /* background: rgba(79, 78, 78, 0.231); */
-    
+ 
 }
 .picture{
     height: 100%;
@@ -123,7 +121,7 @@ html , body{
 .infomation{
     height: 100%;
     width: 60%;
-    /* background: #7e6a6a; */
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -136,9 +134,7 @@ html , body{
     width: 50px;
     top: 60px;
     left: 60px;
-    /* top: 120px;
-    left: 180px; */
-    /* background: red; */
+
     border-top: 4px solid #D35400;
     border-left: 4px solid #D35400;
     box-shadow: -8px -8px 6px #d3540065;
@@ -149,9 +145,7 @@ html , body{
     position: absolute;
     bottom:  50px;
     right: 60px;
-    /* top: 140px;
-    left: 200px; */
-    /* background: red; */
+  
     box-shadow: 8px 8px 6px #d3540065;
 
 
@@ -170,18 +164,18 @@ html , body{
 .data h4{
     font-weight: 700;  
     font-size: 1rem ;
-    /* line-height: 30px; */
+
 }
 .big{
     line-height: 40px;
     font-size: 1.3rem;
-    /* color: aqua; */
+
 }
 #discribe{
     font-size: 1rem;
     font-weight: 700;  
       white-space: nowrap;
-    /* line-height: 20px;/ */
+
 }
 .blue{
     font-size: 1.1rem;
@@ -199,15 +193,14 @@ html , body{
 .string{
     height: 200px;
     width: 100%;
-   /* background: #000; */
-    /* text-align: start; */
+
 }
 
 /* page2 */
 #page2{
     height: 100%;
     width:100%;
-    /* background: rgb(92, 64, 64); */
+
     display: flex;
     align-items: center;
     justify-content: center;

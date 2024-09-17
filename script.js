@@ -116,29 +116,30 @@ tl.from(".color", {
     
 })
 // page 3
-let val = "M 10 100 Q 110 50 210 100 T 410 150 T 610 100 T 810 50";
+
 
 gsap.to("#orange-line", {
 
-  strokeDasharray: "1000", // Change this number to control how much of the path is drawn
+  strokeDasharray: "1000", 
   scrollTrigger: {
     trigger: "#progress-line",
-    start: "top 80%", // When the scroll starts
-    end: "top 20%",   // When the scroll ends
-    scrub: 2,         // Smoothens the scroll animation
-    markers: true     // Remove this if you don't need markers for debugging
+    start: "top 80%", 
+    end: "top 20%",   
+    scrub: 2,         
+    // markers: true
   }
 });
 
 
-gsap.to("#progress-line .animTxt", {
+tl.to("#progress-line .animTxt", {
     attr:{fill: "green"},
+    delay:0.1,
+    stagger:0.1,
     scrollTrigger: {
         trigger: "#progress-line",
-        start: "top 80%", // When the scroll starts
-        end: "top 20%",   // When the scroll ends
-        scrub: 2,         // Smoothens the scroll animation
-        markers: true     // Remove this if you don't need markers for debugging
+        start: "top 80%", 
+        end: "top 20%",  
+    //   scrub: 2,   
       }
 
 })
