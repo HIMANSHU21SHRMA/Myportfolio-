@@ -86,6 +86,63 @@ gsap.to(".menu",{
         scrub:2
     }
 })
+gsap.from("#page2 #Journey", {
+    filter:"blur(10px)",
+    x:-100,  
+    scrollTrigger:{
+        trigger:"#page2",
+        scroller:"body",
+        // markers:true,
+        start:"top 40%",
+        end:"top 30%",
+        scrub:2
+    }
+}) 
+let tl = gsap.timeline();
+tl.from(".color", {
+    opacity:0,
+    x:-30,
+    delay:0.3,
+    duration:0.3,
+    stagger:0.6,
+    scrollTrigger:{
+        trigger:"#page2",
+        scroller:"body",
+        // markers:true,
+        start:"top 50%",
+        end:"top 30%",
+        scrub:2
+    }
+    
+})
+// page 3
+let val = "M 10 100 Q 110 50 210 100 T 410 150 T 610 100 T 810 50";
+
+gsap.to("#orange-line", {
+
+  strokeDasharray: "1000", // Change this number to control how much of the path is drawn
+  scrollTrigger: {
+    trigger: "#progress-line",
+    start: "top 80%", // When the scroll starts
+    end: "top 20%",   // When the scroll ends
+    scrub: 2,         // Smoothens the scroll animation
+    markers: true     // Remove this if you don't need markers for debugging
+  }
+});
+
+
+gsap.to("#progress-line .animTxt", {
+    attr:{fill: "green"},
+    scrollTrigger: {
+        trigger: "#progress-line",
+        start: "top 80%", // When the scroll starts
+        end: "top 20%",   // When the scroll ends
+        scrub: 2,         // Smoothens the scroll animation
+        markers: true     // Remove this if you don't need markers for debugging
+      }
+
+})
+
 // cursor
 let cursor = document.querySelector("#cursor");
 let body = document.querySelector("body");
@@ -96,7 +153,33 @@ body.addEventListener("mousemove", (e) => {
         // ease: "power2.inOut"
     })
 })
+// for string
+let initialPath = 'M 50 100 Q 550 100 1030 100';
+let finalPath = 'M 50 100 Q 550 100 1030 100';
+ 
+let string = document.querySelector(".string");
 
+string.addEventListener("mousemove", (e) => {
+    let x = e.x
+    let y = e.y - 318;
+
+  initialPath = `M 50 100 Q ${x} ${y} 1030 100`;
+
+ gsap.to("svg path", {
+    attr:  {d: initialPath},
+    duration:0.3,
+    ease:"power3.out"
+
+  });
+})
+string.addEventListener("mouseleave", (e) => {
+    gsap.to("svg path", {
+        attr:  {d: finalPath},
+        duration:1.5,
+        ease:"elastic.out(1,0.2)"
+    
+      });
+})
 // lets start the js
 let homeLinks = document.querySelector(".navigation");
 let linkHider = document.querySelector(".menu");
