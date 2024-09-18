@@ -9,6 +9,8 @@ html , body{
     width: 100%;
     position: relative;
     scrollbar-width: thin;
+    /* background: rgb(246, 233, 216); */
+    background: rgb(240, 224, 200) ;
 }
 /* nav bar / and floting sec... */
 /* cursor */
@@ -96,10 +98,10 @@ html , body{
 #page1{
     height: 100%;
     width: calc(100% - 14rem);
-
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 #center-photo{
     height: 60vh;
@@ -109,7 +111,7 @@ html , body{
     align-items: center;
     justify-content: center;
     width: 70vw;
- 
+    box-shadow: 3px 3px 10px #f4ccabdc;
 }
 .picture{
     height: 100%;
@@ -121,7 +123,6 @@ html , body{
 .infomation{
     height: 100%;
     width: 60%;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -198,9 +199,9 @@ html , body{
 
 /* page2 */
 #page2{
-    height: 100%;
+    height: 70vh;
     width:100%;
-
+ 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -217,10 +218,10 @@ html , body{
 
 .image{
   width: 27%;
+  mix-blend-mode: multiply;
 }
 #Journey img{
      width: 100%;
-   
     object-fit: contain;
     mix-blend-mode: multiply;
 }
@@ -276,9 +277,189 @@ html , body{
 }
 
 #page3{
-    height: 40vh;
+    height: 50vh;
     width: 100%;
     align-content: center;
     padding-left: 20px;
-    background: #0c0c0c;
+    /* background: #fff3f3; */
+    text-align: center;
+    color: #1c1b1adb;
 }
+#page3 h2{
+    font-size: 1.1rem;
+    align-content: center;
+    margin-bottom: 10px;
+}
+#page3 h2 span{
+    border-bottom:2px solid #ffbb00;
+    
+}
+#project-overview{
+    margin-top: 100px;
+    margin-bottom: 90px;
+    font-size: 1.1rem;
+    text-align: center;
+}
+/* page4 */
+.page4{
+    height: 60vh;
+    width: 100%;
+    display: flex;
+
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+
+.project{
+    border-radius: 20px;
+    height: 70%;
+    width: 40%;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    position: relative;
+    z-index: -10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+/* .project img{
+    height: 100%;
+} */
+.project img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+  }
+
+  .title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:#2c3e50a4; /* Dark transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Initially invisible */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Add transform transition */
+    border-radius: 8px;
+
+
+  }
+  .title-text {
+    color: #fff;
+    /* font-size: 1.2rem; */
+    text-align: center;
+    padding: 10px;
+    transform: translateX(-100%); /* Start from off-screen (left) */
+    transition: transform 0.3s ease; /* Animate slide-in */
+  }
+  .title-text h3{
+    font-size: 1rem;
+
+  }
+  .title-text p{
+    padding:0 40px;
+    font-size: 0.8rem;
+
+  }
+  .button{
+    margin-top: 40px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+  }
+  .button button{
+    height: 20px;
+    width: 60px;
+    border: none;
+    background: #79b3da91 ;
+    border-radius: 7px;
+    font-size: 0.7rem;
+    transition: transform 0.3s ease; 
+  }
+  .button button:hover{
+    transform: scale(1.05);
+background: #79b3dae1;
+  }
+
+.project:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+  }
+  .project:hover .title {
+    opacity: 1; /* Overlay becomes visible */
+  }
+  
+  .project:hover .title-text {
+    transform: translateX(0); /* Slide the text in from the left */
+  }
+
+ 
+  #contact {
+    max-width: 1000px;
+    margin: 100px ;
+    padding: 20px;
+    background: rgba(238, 234, 229, 0.622) ;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  #contact h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.622) ;
+    padding: 10px;
+    border: 1px solid #ddd;
+    outline: none;
+    border-radius: 4px;
+  }
+  .form-group textarea{
+    resize: none;
+  }
+  #contact button {
+    background-color: #2980b9;
+    color: #fff;
+    box-shadow: 2px 2px 5px hsla(39, 10%, 34%, 0.757);
+    border: none;
+    padding: 10px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;  
+    transition: all 0.3s ease;   
+    border-radius: 14px;   
+  }
+  
+  #contact button:hover {
+    background-color: #2094e1;
+    box-shadow: 2px 2px 5px hsla(40, 19%, 49%, 0.843);
+
+
+  }
+  
+  .footer{
+    height: 20vh;
+    width: 100%;
+    background: red;
+  }

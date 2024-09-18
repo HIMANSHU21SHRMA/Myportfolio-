@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PERSIONAL PORTFLIO</title>
+    <title>PORTFOLIO : HOME</title>
+    <link rel="icon" href="fevicon.png" type="image/png">
+
     <link rel="stylesheet" href="style.css" />
     <script
       src="https://kit.fontawesome.com/dead64de13.js"
@@ -14,7 +16,7 @@
     <div id="cursor"></div>
     <nav id="nav-bar">
       <div class="navigation hidden">
-        <h3>Home</h3>
+        <a href="#page1"><h3>Home</h3></a>
         <h3>My Project</h3>
         <h3>Education</h3>
         <h3>Contact me</h3>
@@ -26,7 +28,6 @@
         <li><i class="fa-solid fa-at"></i></li>
       </div>
     </nav>
-
 
     <div class="menu">
       <i class="fa-solid fa-bars" id="menuIcon"></i>
@@ -73,55 +74,220 @@
         <div class="text">
           <h2>My Path in Web Development</h2>
           <p>
-            Since starting web development in 2023, I’ve been passionate about <br>
-            building seamless digital experiences. My first project, an 
-            <span class="color" id="color-1"> e-commerce</span> site, <br> ignited my journey into <span class="color" id="color-2">HTML</span>, <span class="color" id="color-3"
-            >CSS</span>, <span class="color" id="color-4">JavaScript</span> ,
-            <span class="color" id="color-5">React</span>, and advanced <span class="color" id="color-6">GSAP</span>  animations. <br> Now, I'm focused on mastering
-            <span class="color" id="color-7">Node.js</span>  and backend development, embracing each  <br> project as a new 
-            opportunity to learn and grow.
+            Since starting web development in 2023, I’ve been passionate about
+            <br />
+            building seamless digital experiences. My first project, an
+            <span class="color" id="color-1"> e-commerce</span> site, <br />
+            ignited my journey into
+            <span class="color" id="color-2">HTML</span>,
+            <span class="color" id="color-3">CSS</span>,
+            <span class="color" id="color-4">JavaScript</span> ,
+            <span class="color" id="color-5">React</span>, and advanced
+            <span class="color" id="color-6">GSAP</span> animations. <br />
+            Now, I'm focused on mastering
+            <span class="color" id="color-7">Node.js</span> and backend
+            development, embracing each <br />
+            project as a new opportunity to learn and grow.
           </p>
         </div>
       </section>
     </main>
     <!-- page three -->
     <main id="page3">
-      <svg id="progress-line" width="1162" height="200" style="background-color: rgba(216, 130, 130, 0); border: 2px solid rgba(0, 0, 0, 0);">
-
-        <path id="orange-line"  d="M 10 100 Q 110 50 210 100 T 410 150 T 610 100 T 810 50"
+      <h2>My <span>Technical </span>Journey</h2>
+      <svg
+        id="progress-line"
+        width="1162"
+        height="200"
+        style="
+          background-color: transparent;
     
-              stroke="orange" stroke-width="10" fill="none" stroke-dasharray="0 1" />
-      
-       
-        <path d="M 810 50 T 1010 100 T 1150 100" 
-              stroke="white" stroke-width="10" fill="none" />
+        "
+      >
+        <path
+          id="orange-line"
+          d="M 10 100 Q 110 50 210 100 T 410 150 T 610 100 T 810 50"
+          stroke="orange"
+          stroke-width="10"
+          fill="none"
+          stroke-dasharray="0 1"
+        />
 
-        <rect x="0" y="0" width="1162" height="200" fill="none" stroke="black" stroke-width="2"/>
-        
-        <circle class="animTxt" cx="10" cy="100" r="10" fill="white"/>
-        <text  x="0" y="130" fill="white" font-size="16">HTML</text>
-      
-        <circle class="animTxt" cx="210" cy="100" r="10" fill="white"/>
-        <text x="190" y="130" fill="white" font-size="16">CSS</text>
-      
-        <circle class="animTxt" cx="410" cy="150" r="10" fill="white"/>
-        <text x="390" y="180" fill="white" font-size="16">JavaScript</text>
-      
-        <circle class="animTxt" cx="610" cy="100" r="10" fill="white"/>
-        <text x="590" y="130" fill="white" font-size="16">GSAP</text>
-      
-        <circle class="animTxt" cx="810" cy="50" r="10" fill="white"/>
-        <text x="790" y="80" fill="white" font-size="16">React</text>
-      
-        <circle cx="1010" cy="100" r="10" fill="white"/>
-        <text x="990" y="130" fill="white" font-size="16">Node.js</text>
+        <path
+          d="M 810 50 T 1010 100 T 1150 100"
+          stroke="white"
+          stroke-width="10"
+          fill="none"
+        />
+
+        <rect
+          x="0"
+          y="0"
+          width="1162"
+          height="200"
+          fill="none"
+          stroke="transparent"
+          stroke-width="2"
+        />
+
+        <circle class="animTxt" cx="10" cy="100" r="10" fill="white" />
+        <text x="0" y="130" fill="black" font-size="16">HTML</text>
+
+        <circle class="animTxt" cx="210" cy="100" r="10" fill="white" />
+        <text x="190" y="130" fill="black" font-size="16">CSS</text>
+
+        <circle class="animTxt" cx="410" cy="150" r="10" fill="white" />
+        <text x="390" y="180" fill="black" font-size="16">JavaScript</text>
+
+        <circle class="animTxt" cx="610" cy="100" r="10" fill="white" />
+        <text x="590" y="130" fill="black" font-size="16">GSAP</text>
+
+        <circle class="animTxt" cx="810" cy="50" r="10" fill="white" />
+        <text x="790" y="80" fill="black" font-size="16">React</text>
+
+        <circle cx="1010" cy="100" r="10" fill="white" />
+        <text x="990" y="130" fill="black" font-size="16">Node.js</text>
       </svg>
-      
+    </main>
+    <h2 id="project-overview" >Projects Overview</h2>
+    
+    <main class="page4" id="one">
+      <div class="project">
+        <img src="project1.png" alt="" />
+        <div class="title">
+          <div class="title-text">
+            <h3>Rock-Paper-Scissors Game</h3>
+            <div class="button">
+              <a
+                href="https://github.com/HIMANSHU21SHRMA/rock-paper-scissor-game"
+              >
+                <button>View Code</button></a
+              >
+              <a
+                href="https://himanshu21shrma.github.io/rock-paper-scissor-game/"
+              >
+                <button>Visit Site</button></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="project">
+        <img src="project2.png" alt="" />
+        <div class="title">
+          <div class="title-text">
+            <h3>Password Manager</h3>
+            <p>
+              A tool for securely storing passwords in local storage and
+              generating strong new passwords.
+            </p>
+            <div class="button">
+              <a href="https://github.com/HIMANSHU21SHRMA/PassManaz">
+                <button>View Code</button></a
+              >
+              <a href="https://himanshu21shrma.github.io/PassManaz/">
+                <button>Visit Site</button></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>  
+    </main>
+    <main class="page4" id="two">
+      <div class="project">
+        <img src="project3.png" alt="" />
+        <div class="title">
+          <div class="title-text">
+            <h3>Memory Game</h3>
+            <p>
+              Strategically use lifelines to enhance gameplay: 50/50 narrows
+              down to 2 correct cards from 4 options, Show reveals all card
+              positions for 1.1 seconds, and Hint highlights a matching pair
+              when no cards are selected.
+            </p>
+            <div class="button">
+              <a href="https://github.com/HIMANSHU21SHRMA/MeMo-RY-Game">
+                <button>View Code</button></a
+              >
+              <a href="https://himanshu21shrma.github.io/MeMo-RY-Game/">
+                <button>Visit Site</button></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="project">
+        <img src="project4.png" alt="" />
+        <div class="title">
+          <div class="title-text">
+            <h3>Math Notes App</h3>
+            <p>
+              A versatile tool for solving math problems and organizing notes.
+              Features a calculator for quick calculations, a canvas for writing
+              and sketching, and options to save both calculation results and
+              canvas drawings.
+            </p>
+            <div class="button">
+              <a href="https://github.com/HIMANSHU21SHRMA/MATH-NOTES-APP">
+                <button>View Code</button></a
+              >
+              <a href="https://himanshu21shrma.github.io/MATH-NOTES-APP/">
+                <button>Visit Site</button></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <main class="page4" id="three">
+      <div class="project">
+        <img src="project5.png" alt="" />
+        <div class="title">
+          <div class="title-text">
+            <h3>Weather Forecast App</h3>
+            <p>
+              Provides a 5-day weather forecast with detailed hourly updates every 3 hours. Features include customizable themes, unit conversion between kilometers and miles, and temperature toggles between Celsius and Fahrenheit.
+            </p>
+            <div class="button">
+              <a href="https://github.com/HIMANSHU21SHRMA/Weather-forCAst">
+                <button>View Code</button></a
+              >
+              <a href="https://himanshu21shrma.github.io/Weather-forCAst/">
+                <button>Visit Site</button></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>        
+    </div>
+
     </main>
 
+  
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="4cfdfc5c-16c8-4d72-880f-c8c004d60db0">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+    
+      
+<footer class="footer">
 
-
-
+</footer>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
       integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="

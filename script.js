@@ -93,7 +93,7 @@ gsap.from("#page2 #Journey", {
         trigger:"#page2",
         scroller:"body",
         // markers:true,
-        start:"top 40%",
+        start:"top 92%",
         end:"top 30%",
         scrub:2
     }
@@ -138,11 +138,50 @@ tl.to("#progress-line .animTxt", {
     scrollTrigger: {
         trigger: "#progress-line",
         start: "top 80%", 
-        end: "top 20%",  
+        end: "top 19%",  
     //   scrub: 2,   
       }
 
 })
+
+gsap.from("#one" , {
+    filter:"blur(10px)",
+    x:-100,  
+    scrollTrigger:{
+        trigger:"#one",
+        scroller:"body",
+        // markers:true,
+        start:"top 100%",       
+        end:"top 19%",
+        scrub:2,
+    }
+}) 
+gsap.from("#two", {
+    filter:"blur(10px)",
+    x:-100,  
+
+    scrollTrigger:{
+        trigger:"#two",
+        scroller:"body",
+        // markers:true,
+        start:"top 100%",       
+        end:"top 19%",
+        scrub:2,
+    }
+}) 
+gsap.from("#three", {
+    filter:"blur(10px)",
+    x:-100,  
+
+    scrollTrigger:{
+        trigger:"#three",
+        scroller:"body",
+        // markers:true,
+        start:"top 100%",       
+        end:"top 30%",
+        scrub:2,
+    }
+}) 
 
 // cursor
 let cursor = document.querySelector("#cursor");
