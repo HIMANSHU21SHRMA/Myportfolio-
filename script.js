@@ -183,16 +183,7 @@ gsap.from("#three", {
     }
 }) 
 
-// cursor
-let cursor = document.querySelector("#cursor");
-let body = document.querySelector("body");
-body.addEventListener("mousemove", (e) => {
-    gsap.to(cursor, {
-        x:e.x,
-        y:e.y,
-        // ease: "power2.inOut"
-    })
-})
+
 // for string
 let initialPath = 'M 50 100 Q 550 100 1030 100';
 let finalPath = 'M 50 100 Q 550 100 1030 100';
