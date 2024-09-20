@@ -322,7 +322,6 @@ html , body{
     height: 60vh;
     width: 100%;
     display: flex;
-
     align-items: center;
     justify-content: space-evenly;
 
@@ -340,6 +339,7 @@ html , body{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
 }
+
 /* .project img{
     height: 100%;
 } */
@@ -559,9 +559,22 @@ background: #e8854b;
     min-width: 400px;
 
  }
+ #three{
+    height: 60vh;
+ }
+#project-overview{
+    font-size: 2rem;
+}
  .project img{
     width: 100%;
  }
+ 
+ #three .project{
+    height: 50%;
+    width: 40%;
+    justify-content: start;
+    align-items: start;
+}   
     #center-photo{
         height: 60%;
         flex-direction: column;
@@ -575,4 +588,16 @@ background: #e8854b;
         width: 90%;
     }
    
+}
+
+@media (max-width: 720px) {
+    #contact{
+        width: 90%;
+        margin:0 auto;
+    }
+}
+@media (max-width: 468px) {
+    .box1, .box2{
+          display: none;
+    }
 }
